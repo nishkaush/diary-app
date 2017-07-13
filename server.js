@@ -428,14 +428,15 @@ app.post("/forgot", async(req, res) => {
         foundUser.tokenExpires = Date.now() + 3600000
 
         await foundUser.save();
-
+        // http://localhost:3000
+        //
         // not using juice since can't auto-inject the url of the reset link
         var mailOptions = {
             from: "Admin",
             to: req.body.forgottenEmail,
             subject: "Reset Password",
-            text: `Copy and paste the following link into your browser to reset the password, http://localhost:3000/reset/${resetPasswordToken}`,
-            html: `<h1>Reset Password</h1><a href="http://localhost:3000/reset/${resetPasswordToken}" target="_blank">Click Here to Reset</a`
+            text: `Copy and paste the following link into your browser to reset the password, https://arcane-bayou-67806.herokuapp.com/reset/${resetPasswordToken}`,
+            html: `<h1>Reset Password</h1><a href="https://arcane-bayou-67806.herokuapp.com/reset/${resetPasswordToken}" target="_blank">Click Here to Reset</a`
         };
 
         let result = await transport.sendMail(mailOptions);
