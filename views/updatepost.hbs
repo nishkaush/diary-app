@@ -134,16 +134,39 @@
 
     <form method="POST" onsubmit="return confirm('Update this entry in the database')">
       <div class="update-div">
-        <input type="text" name="title" value="{{title}}" required>
+        <input type="text" name="title" value="{{mytitle}}" required>
 
-        <textarea name="bodytext" rows="8" cols="80" required>{{bodytext}}</textarea>
+        <textarea name="bodytext" rows="8" cols="80" required>{{mybodytext}}</textarea>
 
         <button type="submit" name="submit" value="submit">Submit</button>
       </div>
     </form>
 
 
-    <script type="text/javascript" src="client.js"></script>
+    <script>
+    const home = document.getElementById("home-btn");
+    const create = document.getElementById("create-btn");
+    const logout = document.getElementById("logout-btn");
+    
+    if (home) {
+        home.addEventListener("click", function() {
+            window.location = "/home";
+        });
+    }
+
+    if (create) {
+        create.addEventListener("click", function() {
+            window.location = "/create";
+        });
+    }
+
+    if (logout) {
+        logout.addEventListener("click", function() {
+            window.location = "/logout";
+        });
+    }
+
+    </script>
 
   </body>
 </html>

@@ -305,9 +305,9 @@ app.get("/update/:id", (req, res) => {
             }
             let title = entry.title;
             let bodytext = entry.bodytext;
-            return res.render("update", {
-                title: title,
-                bodytext: bodytext
+            return res.render("updatepost", {
+                mytitle: title,
+                mybodytext: bodytext
             });
         }).catch((e) => {
             console.log("ERROR IN GET UPDATE PATH", e);
@@ -428,9 +428,7 @@ app.post("/forgot", async(req, res) => {
         foundUser.tokenExpires = Date.now() + 3600000
 
         await foundUser.save();
-        // http://localhost:3000
-        //
-        // not using juice since can't auto-inject the url of the reset link
+
         var mailOptions = {
             from: "Admin",
             to: req.body.forgottenEmail,

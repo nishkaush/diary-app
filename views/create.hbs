@@ -134,14 +134,13 @@
 
     <form action="/home" method="POST" onsubmit="return confirm('Save this entry')">
       <div class="edit-div">
-        <input type="text" name="title" placeholder="Title" autofocus>
+        <input type="text" name="title" placeholder="Title" autofocus autocomplete="off">
         <textarea name="bodytext" rows="8" cols="80" placeholder="Start typing here"></textarea>
         <button type="submit" name="submit">Submit</button>
       </div>
     </form>
 
 
-<script src="axios.min.js"></script>
 <script src="client.js"></script>
 
 

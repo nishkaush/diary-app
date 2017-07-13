@@ -162,7 +162,6 @@
             <input type="text" name="username" placeholder="username" required autofocus autocomplete="off">
             <input type="email" name="email" placeholder="email" required autocomplete="off">
             <input type="password" name="password" placeholder="password" required autocomplete="off">
-            <!-- <input type="submit" name="button"> -->
             <button type="submit" name="button" value="SIGNUP">SIGNUP</button>
           </div>
       </form>
@@ -170,9 +169,8 @@
 
       <form name="login-form" action="/login" method="POST">
           <div id="login-div">
-            <input type="email" name="email" placeholder="email" required autocomplete="on">
-            <input type="password" name="password" placeholder="password" required autocomplete="on">
-            <!-- <input type="submit" name="button" value="LOGIN"> -->
+            <input type="email" name="email" placeholder="email" required autocomplete="off">
+            <input type="password" name="password" placeholder="password" required autocomplete="off">
             <button type="submit" name="button" value="LOGIN">LOGIN</button>
 
             <a href="/forgot" style="text-transform: uppercase; text-decoration:none; color:white; letter-spacing:1px;">Forgot Password</a>
@@ -181,11 +179,7 @@
     </div>
 
 
-<!-- <form action="/sentemail" method="GET">
-  <input type="submit" name="emailBtn" value="Send Email">
-</form> -->
-
-    <script src="axios.min.js"></script>
     <script src="client.js"></script>
+
   </body>
 </html>
