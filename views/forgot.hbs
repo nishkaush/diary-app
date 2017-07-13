@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Forgot Password</title>
+    <style media="screen">
+    body{
+      padding: 0;
+      margin:0;
+      width:100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 700px;
+      background:linear-gradient(to right, #0cebeb,#20e3b2,#29ffc6);
+
+    }
+    form{
+      height:300px;
+      display: flex;
+      flex-flow: column;
+      width:30%;
+      align-items: center;
+      justify-content: center;
+    }
+    form input{
+      height:40px;
+      width:90%;
+      margin: 0 0 10%;
+      padding-left:2%;
+      font-size: 1em;
+      border:none;
+      border-bottom:2px solid white;
+      background: transparent;
+      color:white;
+      border-radius:20px;
+      box-shadow: none;
+    }
+    form input:focus{
+      outline:none;
+    }
+    form button{
+      width:70%;
+      height:40px;
+      cursor: pointer;
+      font-size: 1.2em;
+      background:white;
+      border:1px solid white;
+      box-shadow: 3px 3px 3px 3px #d1d1d1;
+      letter-spacing: 1px;
+    }
+    form button:hover{
+      background: plum;
+      border:none;
+      box-shadow: 3px 3px 3px 3px #b080b0;
+      color:white;
+    }
+    form button:active{
+      outline:none;
+      box-shadow: none;
+    }
+      p{
+        color:red;
+        letter-spacing: 1px;
+        font-family: futura;
+        margin-bottom:10%;
+      }
+      h1{
+        letter-spacing: 1px;
+      }
+    </style>
+  </head>
+  <body>
+
+<form method="POST">
+  <h1>Forgotten Password</h1>
+
+<p>{{message}}</p>
+<input type="email" name="forgottenEmail" placeholder="Specify your email" required autofocus autocomplete="off">
+
+<button type="submit" name="submit-forgot" value="Submit">Submit</button>
+
+</form>
+
+  </body>
+</html>

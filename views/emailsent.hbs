@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Email Sent</title>
+    <style media="screen">
+    body{
+      padding: 0;
+      margin:0 auto;
+      width:50%;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-flow: column;
+      height: 700px;
+      background:linear-gradient(to right, #0cebeb,#20e3b2,#29ffc6);
+    }
+    h1{
+      color:white;
+      text-transform: capitalize;
+      letter-spacing: 1px;
+      font-weight: normal;
+      line-height: 1.5;
+    }
+    button{
+      width:50%;
+      height:50px;
+      cursor: pointer;
+      font-size: 1.2em;
+      background:white;
+      border:1px solid white;
+      box-shadow: 3px 3px 3px 3px #d1d1d1;
+      letter-spacing: 1px;
+      margin-top:4%;
+    }
+    button:hover{
+      background: plum;
+      border:none;
+      box-shadow: 3px 3px 3px 3px #b080b0;
+      color:white;
+    }
+    button:active{
+      outline:none;
+      box-shadow: none;
+    }
+    </style>
+  </head>
+  <body>
+    <p><svg fill="#fff" height="50" viewBox="0 0 24 24" width="50" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0 0h24v24H0z" fill="none"/>
+        <path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/>
+    </svg></p>
+    <h1>{{message}}</h1>
+
+    <button type="button" name="button" id="back-to-home">Back To Home</button>
+
+    <script type="text/javascript" src="client.js">
+
+    </script>
+  </body>
+</html>

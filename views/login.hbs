@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Login</title>
+    <style media="screen">
+    body{
+      text-align: center;
+      height:700px;
+      width:100%;
+      padding:0;
+      margin:0;
+      font-family: avenir;
+      background:linear-gradient(to right, #0cebeb,#20e3b2,#29ffc6);
+    }
+    h1{
+      letter-spacing: 1px;
+      padding-top:5%;
+    }
+    p{
+      text-transform: capitalize;
+    }
+    .main-div{
+      height:90%;
+      width:100%;
+      display:flex;
+      justify-content: center;
+      /*align-items: center;*/
+    }
+    form{
+      height:70%;
+      width:40%;
+      padding:2%;
+    }
+
+    #signup-div{
+      height:90%;
+      display: flex;
+      flex-flow: column;
+      justify-content: center;
+      align-items: center;
+    }
+    #signup-div input[required]{
+      width:80%;
+      margin:2% 0;
+      height:10%;
+      padding-left:2%;
+      font-size: 1em;
+      border:none;
+      border-bottom:2px solid white;
+      background: transparent;
+      color:white;
+      border-radius:20px;
+    }
+    #signup-div input[required]:focus{
+      outline:none;
+    }
+
+#signup-div input[required]::placeholder{
+  color:white;
+}
+
+    #signup-div button{
+      width:70%;
+      margin-top:5%;
+      height:50px;
+      cursor: pointer;
+      font-size: 1.2em;
+      background:white;
+      border:1px solid white;
+      box-shadow: 3px 3px 3px 3px #d1d1d1;
+      letter-spacing: 1px;
+      /*border-radius:10px;*/
+    }
+    #signup-div button:hover{
+      background: plum;
+      border:none;
+      box-shadow: 3px 3px 3px 3px #b080b0;
+      color:white;
+    }
+    #signup-div button:active{
+      outline:none;
+      box-shadow: none;
+    }
+    #signup-div button:focus{
+      outline:none;
+      box-shadow: none;
+    }
+
+  /*#######################################*/
+
+  #login-div{
+    height:98%;
+    display: flex;
+    flex-flow: column;
+    justify-content:center;
+    align-items: center;
+  }
+  #login-div input[required]{
+    width:80%;
+    margin:2.5% 0;
+    height:12%;
+    padding-left:2%;
+    font-size: 1em;
+    border:none;
+    border-bottom:2px solid white;
+    background: transparent;
+    color:white;
+    border-radius:25px;
+
+  }
+  #login-div input[required]:focus{
+    outline:none;
+  }
+
+  #login-div input[required]::placeholder{
+    color:white;
+  }
+
+  #login-div button{
+    width:70%;
+    margin:10% 0 3% 0%;
+    height:50px;
+    cursor: pointer;
+    font-size: 1.2em;
+    background:white;
+    border:1px solid white;
+    box-shadow: 3px 3px 3px 3px #d1d1d1;
+    letter-spacing: 1px;
+
+  }
+  #login-div button:hover{
+    background: plum;
+    border:none;
+    box-shadow: 3px 3px 3px 3px #b080b0;
+    color:white;
+  }
+  #login-div button:active{
+    outline:none;
+    box-shadow: none;
+  }
+  #login-div button:focus{
+    outline:none;
+    box-shadow: none;
+  }
+  h3{
+    color:yellow;
+    font-weight: normal;
+  }
+
+    </style>
+  </head>
+  <body>
+    <h1>Welcome To Diary App</h1>
+    <p>For all your personal scribbling and ideas</p>
+    <h3>{{message}}</h3>
+
+    <div class="main-div">
+
+      <form name="signup-form" action="/signup" method="POST">
+          <div id="signup-div">
+            <input type="text" name="username" placeholder="username" required autofocus autocomplete="off">
+            <input type="email" name="email" placeholder="email" required autocomplete="off">
+            <input type="password" name="password" placeholder="password" required autocomplete="off">
+            <!-- <input type="submit" name="button"> -->
+            <button type="submit" name="button" value="SIGNUP">SIGNUP</button>
+          </div>
+      </form>
+
+
+      <form name="login-form" action="/login" method="POST">
+          <div id="login-div">
+            <input type="email" name="email" placeholder="email" required autocomplete="on">
+            <input type="password" name="password" placeholder="password" required autocomplete="on">
+            <!-- <input type="submit" name="button" value="LOGIN"> -->
+            <button type="submit" name="button" value="LOGIN">LOGIN</button>
+
+            <a href="/forgot" style="text-transform: uppercase; text-decoration:none; color:white; letter-spacing:1px;">Forgot Password</a>
+          </div>
+      </form>
+    </div>
+
+
+<!-- <form action="/sentemail" method="GET">
+  <input type="submit" name="emailBtn" value="Send Email">
+</form> -->
+
+    <script src="axios.min.js"></script>
+    <script src="client.js"></script>
+  </body>
+</html>
